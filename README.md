@@ -21,8 +21,8 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
-- Live Site URL: [Live site URL](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/HassanMak29/frontend-mentor-blogr-landing-page)
+- Live Site URL: [Live site URL](https://frontend-mentor-blogr-landing-hassan.netlify.app/)
 
 ## My process
 
