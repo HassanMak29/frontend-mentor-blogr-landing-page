@@ -31,7 +31,6 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Desktop-first workflow
 - [Vite](https://vite.dev/) - JS tool
 - [PostCSS](https://postcss.org/) - For styles
