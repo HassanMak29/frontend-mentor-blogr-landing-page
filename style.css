@@ -40,8 +40,6 @@ html {
 body {
   font-size: var(--quote-font-size);
   font-family: "Overpass", sans-serif;
-  /* font-family: "Ubuntu", sans-serif; */
-  /* height: 100vh; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -87,7 +85,6 @@ h3 {
 
 .header-background-desktop {
   position: absolute;
-  /* scale: 0.7; */
   width: 200%;
   top: 46%;
   left: 75%;
