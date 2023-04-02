@@ -71,7 +71,7 @@ p {
   line-height: 1.7;
   letter-spacing: 0.5px;
   width: 100%;
-  max-width: 47.5rem;
+  max-width: fit-content;
 }
 
 h2 {
@@ -237,8 +237,10 @@ nav ul li span:hover {
 .hero-section {
   align-self: center;
   height: 100%;
-  text-align: center;
   margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -486,7 +488,63 @@ footer nav .logo {
   color: hsl(10, 30%, 88%);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1100px) {
+  header {
+    height: 50vw;
+  }
+
+  .section-1 {
+    padding: 10rem 5rem 20rem;
+    overflow: hidden;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  .illustration-editor-desktop {
+    width: 70vw;
+  }
+
+  .section-2-wrapper {
+    padding: 10rem 5rem;
+  }
+
+  .bg-pattern-circles {
+    position: absolute;
+    width: 80rem;
+    top: -10rem;
+    left: 19rem;
+    transform: translate(-50%, -50%);
+  }
+
+  .illustration-phones {
+    width: 50vw;
+    left: 1vw;
+  }
+
+  .section-3 {
+    padding: 20rem 5rem;
+  }
+
+  .illustration-laptop-desktop {
+    width: 65vw;
+  }
+
+  footer {
+    padding: 8rem 5rem;
+  }
+
+  footer nav {
+    margin-bottom: 3rem;
+    align-items: flex-start;
+    gap: 15rem;
+  }
+
+  .attribution {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
   h1 {
     font-size: 4rem;
   }
@@ -646,6 +704,7 @@ footer nav .logo {
   .wrapper {
     flex-direction: column;
     flex-direction: column-reverse;
+    align-items: center;
     gap: 7rem;
   }
 
@@ -663,6 +722,7 @@ footer nav .logo {
 
   .section-2-wrapper {
     flex-direction: column;
+    align-items: center;
     padding: 27rem 3rem 12rem;
     border-top-right-radius: 10rem;
   }
@@ -676,16 +736,22 @@ footer nav .logo {
     z-index: 1;
   }
 
+  .section-2-wrapper p {
+    z-index: 1;
+  }
+
   .bg-pattern-circles {
     position: absolute;
     width: 150%;
     top: 10%;
     left: 50%;
+    z-index: 0;
   }
 
   .illustration-phones {
     position: absolute;
     width: 90%;
+    max-width: 50rem;
     top: 3%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -694,6 +760,7 @@ footer nav .logo {
   .section-3 {
     padding: 7rem 3rem 10rem;
     flex-direction: column;
+    align-items: center;
     overflow: hidden;
   }
 

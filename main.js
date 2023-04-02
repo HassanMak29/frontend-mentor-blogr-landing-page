@@ -1,25 +1,17 @@
 import "./style.css";
 
 const body = document.querySelector("body");
-const navItems = document.querySelectorAll("header nav span");
+const navItems = document.querySelectorAll(".nav-element");
 const options = document.querySelectorAll("header nav a");
-const arrows = document.querySelectorAll("header nav .arrow-down");
 const menuIcon = document.querySelector(".menu-icon");
 const closeIcon = document.querySelector(".close-icon");
 const burgerMenu = document.querySelector(".nav-wrapper");
 
 navItems.forEach((item) => {
   item.addEventListener("click", () => {
-    item.classList.toggle("option-open");
-    item.parentNode.querySelector(".options").classList.toggle("options-open");
-    item.parentNode.querySelector("svg").classList.toggle("arrow-down-open");
-  });
-});
-
-arrows.forEach((item) => {
-  item.addEventListener("click", () => {
-    item.parentNode.querySelector(".options").classList.toggle("options-open");
-    item.parentNode.querySelector("svg").classList.toggle("arrow-down-open");
+    item.querySelector("span").classList.toggle("option-open");
+    item.querySelector(".options").classList.toggle("options-open");
+    item.querySelector("svg").classList.toggle("arrow-down-open");
   });
 });
 
@@ -45,12 +37,16 @@ closeIcon.addEventListener("click", () => {
 burgerMenu.addEventListener("click", (e) => {
   e.stopPropagation();
   navItems.forEach((item) => {
-    if (e.target !== item && !Array.from(options).includes(e.target)) {
-      item.classList.remove("option-open");
-      item.parentNode
-        .querySelector(".options")
-        .classList.remove("options-open");
-      item.parentNode.querySelector("svg").classList.remove("arrow-down-open");
+    console.log(e.target, item);
+    if (
+      e.target !== item &&
+      e.target !== item.querySelector("span") &&
+      e.target !== item.querySelector("svg") &&
+      !Array.from(options).includes(e.target)
+    ) {
+      item.querySelector("span").classList.remove("option-open");
+      item.querySelector(".options").classList.remove("options-open");
+      item.querySelector("svg").classList.remove("arrow-down-open");
     }
   });
 });
